@@ -27,3 +27,8 @@ const add = n => {
   f.valueOf = () => n;
   return f;
 }
+
+// my decision stupid =)
+const add = eventHandler => argument => event => {
+    return eventHandler + argument + event;
+};
