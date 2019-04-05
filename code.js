@@ -32,3 +32,16 @@ const add = n => {
 const add = eventHandler => argument => event => {
     return eventHandler + argument + event;
 };
+
+//best
+function add(n){
+  var fn = function(x) {
+    return add(n + x);
+  };
+  
+  fn.valueOf = function() {
+    return n;
+  };
+  
+  return fn;
+}
